@@ -9,17 +9,16 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: black; /* changed to solid black */
-      color: #ff0000;
-      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+      background: white;
+      color: black;
     }
 
     header {
-      background: rgba(0,0,0,0.85);
-      color: #ff0000;
+      background: #f0f0f0;
+      color: black;
       padding: 20px;
       text-align: center;
-      border-bottom: 2px solid #ff0000;
+      border-bottom: 2px solid #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -27,15 +26,14 @@
     }
 
     header img {
-      height: 60px; /* your logo size */
+      height: 60px; /* logo size */
     }
 
     .hero {
-      background: rgba(0,0,0,0.85);
-      color: #ff0000;
+      background: #f9f9f9;
+      color: black;
       padding: 50px 20px;
       text-align: center;
-      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
     }
 
     .products {
@@ -46,50 +44,71 @@
     }
 
     .product {
-      background: rgba(0,0,0,0.85);
+      background: #fff;
       border-radius: 8px;
       padding: 20px;
       text-align: center;
-      border: 1px solid #ff0000;
-      box-shadow: 0 0 15px #ff0000;
+      border: 1px solid #000;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .product:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 25px #ff0000, 0 0 35px #ff0000;
+      box-shadow: 0 0 10px #000;
     }
 
     .product h3 {
       margin: 10px 0;
-      color: #ff0000;
-      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+      color: black;
     }
 
     .price {
       font-weight: bold;
       margin-bottom: 10px;
-      color: #ff0000;
+      color: black;
     }
 
     .btn {
       display: inline-block;
       padding: 12px 20px;
-      background: #ff0000;
-      color: #000;
+      background: black;
+      color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
       transition: all 0.3s;
     }
 
     .btn:hover {
-      background: darkred;
+      background: #333;
       color: white;
-      box-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000;
     }
 
     footer {
-      background: rgba(0,0,0,0.85);
-      color: #ff0
+      background: #f0f0f0;
+      color: black;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      border-top: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="AutoStrike Logo" style="height:60px;">
+  <h1>AutoStrike</h1>
+</header>
+
+<section class="hero">
+  <h2>Upgrade Your Car Today</h2>
+  <p>Premium products • Easy WhatsApp ordering • Classic black & white design</p>
+</section>
+
+<section class="products">
+
+  <div class="product">
+    <h3>Portable Vacuum Cleaner</h3>
+    <p class="price">$35 / €32</p>
+    <a class="btn
