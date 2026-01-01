@@ -5,70 +5,113 @@
   <title>AutoStrike | Car Accessories</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Global Styles */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: #000 url('https://i.ibb.co/4fQy5F9/car-dark-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ff0000;
+      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
     }
+
     header {
-      background: #111;
-      color: white;
+      background: rgba(0,0,0,0.85);
+      color: #ff0000;
       padding: 20px;
       text-align: center;
+      border-bottom: 2px solid #ff0000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
     }
+
+    header img {
+      height: 50px;
+    }
+
     .hero {
-      background: #222;
-      color: white;
-      padding: 40px 20px;
+      background: rgba(0,0,0,0.85);
+      color: #ff0000;
+      padding: 50px 20px;
       text-align: center;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
     }
+
     .products {
       padding: 30px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
+
     .product {
-      background: white;
+      background: rgba(0,0,0,0.85);
       border-radius: 8px;
-      padding: 15px;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border: 1px solid #ff0000;
+      box-shadow: 0 0 15px #ff0000;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #ff0000, 0 0 35px #ff0000;
+    }
+
     .product h3 {
       margin: 10px 0;
+      color: #ff0000;
+      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
     }
+
     .price {
       font-weight: bold;
       margin-bottom: 10px;
+      color: #ff0000;
     }
+
     .btn {
       display: inline-block;
-      padding: 10px 15px;
-      background: #25D366;
-      color: white;
+      padding: 12px 20px;
+      background: #ff0000;
+      color: #000;
       text-decoration: none;
       border-radius: 5px;
+      font-weight: bold;
+      box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+      transition: all 0.3s;
     }
-    footer {
-      background: #111;
+
+    .btn:hover {
+      background: darkred;
       color: white;
+      box-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.85);
+      color: #ff0000;
       text-align: center;
       padding: 15px;
       margin-top: 20px;
+      border-top: 2px solid #ff0000;
+      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
     }
   </style>
 </head>
 <body>
 
 <header>
+  <img src="https://i.ibb.co/5rR3s9h/autostrike-logo.png" alt="AutoStrike Logo">
   <h1>AutoStrike</h1>
-  <p>Premium Car Accessories</p>
 </header>
 
 <section class="hero">
   <h2>Upgrade Your Car Today</h2>
-  <p>Quality products • Easy WhatsApp ordering</p>
+  <p>Premium products • Easy WhatsApp ordering • Sleek design</p>
 </section>
 
 <section class="products">
