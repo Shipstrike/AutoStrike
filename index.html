@@ -2,17 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test AutoStrike</title>
+  <title>AutoStrike | Car Accessories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { background: #fff; color: #000; font-family: Arial; text-align: center; }
-    header img { height: 60px; }
-  </style>
-</head>
-<body>
-<header>
-  <img src="logo.png" alt="AutoStrike Logo">
-  <h1>AutoStrike</h1>
-</header>
-<p>Test site works!</p>
-</body>
-</html>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000 url('https://i.ibb.co/4fQy5F9/car-dark-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ff0000;
+      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+    }
+
+    header {
+      background: rgba(0,0,0,0.85);
+      color: #ff0000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ff0000;
+    }
+
+    .hero {
+      background: rgba(0,0,0,0.85);
+      color: #ff0000;
+      padding: 50px 20px;
+      text-align: center;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    }
+
+    .products {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: rgba(0,0,0,0.85);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ff0000;
+      box-shadow: 0 0 15px #ff0000;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transf
