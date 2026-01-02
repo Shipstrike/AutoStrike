@@ -1,213 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AutoStrike | Car Accessories</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>ShipStrike – Car Accessories</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #ff0000;
-      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
-      position: relative;
-      overflow-x: hidden;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a3cff; /* BLUE background */
+            color: white;
+        }
 
-    /* 🔥 Animated diagonal logo watermark */
-    @keyframes moveWatermark {
-      0% { background-position: 0 0; }
-      50% { background-position: 400px 400px; }
-      100% { background-position: 0 0; }
-    }
+        header {
+            padding: 20px;
+            text-align: center;
+            background: #0830c7;
+        }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: url('autostrike-logo.png');
-      background-repeat: repeat;
-      background-size: 320px 320px;
-      transform: rotate(-45deg);
-      opacity: 0.1;
-      z-index: -1;
-      animation: moveWatermark 40s linear infinite;
-      pointer-events: none;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
 
-    header {
-      background: rgba(0,0,0,0.85);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #ff0000;
-    }
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.6em;
-    }
+        .products {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
 
-    header p {
-      margin: 6px 0;
-      font-size: 1.2em;
-    }
+        .product-card {
+            width: 260px;
+            background: white;
+            color: black;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
 
-    header ul {
-      list-style: disc;
-      padding-left: 0;
-      margin: 8px 0 0;
-      text-align: center;
-    }
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
 
-    header li {
-      list-style-position: inside;
-      margin: 3px 0;
-    }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
-    .hero {
-      background: rgba(0,0,0,0.85);
-      padding: 50px 20px;
-      text-align: center;
-    }
+        .order-btn {
+            background: #0a3cff; /* BLUE button */
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
 
-    .products {
-      padding: 30px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+        .order-btn:hover {
+            background: #0830c7;
+        }
 
-    .product {
-      background: rgba(0,0,0,0.85);
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #ff0000;
-      text-align: center;
-      box-shadow: 0 0 15px #ff0000;
-      transition: 0.3s;
-    }
-
-    .product:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 30px #ff0000;
-    }
-
-    .price {
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #ff0000;
-      color: #000;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: darkred;
-      color: white;
-    }
-
-    footer {
-      background: rgba(0,0,0,0.85);
-      padding: 15px;
-      text-align: center;
-      border-top: 2px solid #ff0000;
-    }
-  </style>
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #0830c7;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <h1>AutoStrike</h1>
-  <p>Upgrade your car today</p>
-  <ul>
-    <li>Premium accessories</li>
-    <li>High Quality</li>
-    <li>Fast Delivery</li>
-    <li>Easy Ordering</li>
-  </ul>
+    <h1>ShipStrike</h1>
+    <p>Upgrade your car today</p>
 </header>
-
-<section class="hero">
-  <h2>Premium products for your vehicle</h2>
-  <p>Order instantly via WhatsApp</p>
-</section>
 
 <section class="products">
 
-  <div class="product">
-    <h3>Portable Vacuum Cleaner</h3>
-    <p class="price">$35 / €32</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
+    <div class="product-card">
+        <img src="images/vacuum.jpg" alt="Car Vacuum" class="product-img">
+        <h3>Portable Car Vacuum</h3>
+        <p class="price">$25</p>
+        <button class="order-btn">Order Now</button>
+    </div>
 
-  <div class="product">
-    <h3>Windshield Wiper Blades</h3>
-    <p class="price">$18 / €16</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
+    <div class="product-card">
+        <img src="images/mat.jpg" alt="Floor Mats" class="product-img">
+        <h3>Car Floor Mats</h3>
+        <p class="price">$40</p>
+        <button class="order-btn">Order Now</button>
+    </div>
 
-  <div class="product">
-    <h3>Cleaning Gels</h3>
-    <p class="price">$12 / €11</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <h3>Microfiber Cleaning Cloths</h3>
-    <p class="price">$8 / €7</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <h3>Window Shades</h3>
-    <p class="price">$15 / €14</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <h3>Floor Mats</h3>
-    <p class="price">$45 / €41</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <h3>Device Holders</h3>
-    <p class="price">$14 / €13</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <h3>Car Trash Cans</h3>
-    <p class="price">$10 / €9</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <h3>Leather Conditioner</h3>
-    <p class="price">$16 / €15</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
-
-  <div class="product">
-    <h3>Steering Wheel Covers</h3>
-    <p class="price">$20 / €18</p>
-    <a class="btn" href="https://wa.me/8801898935549">Order on WhatsApp</a>
-  </div>
+    <div class="product-card">
+        <img src="images/holder.jpg" alt="Phone Holder" class="product-img">
+        <h3>Phone Holder</h3>
+        <p class="price">$15</p>
+        <button class="order-btn">Order Now</button>
+    </div>
 
 </section>
 
 <footer>
-  <p>© 2026 AutoStrike | WhatsApp: 01898935549</p>
+    © 2026 ShipStrike | Premium Car Accessories
 </footer>
 
 </body>
