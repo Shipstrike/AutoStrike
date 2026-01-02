@@ -1,127 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ShipStrike – Car Accessories</title>
+<meta charset="UTF-8">
+<title>AutoStrike – Car Accessories</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000; /* BLACK background */
-            color: white;
-        }
+<style>
+/* ===== BACKGROUND WITH MOVING LOGO ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #ff1a1a;
+    overflow-x: hidden;
+}
 
-        header {
-            padding: 20px;
-            text-align: center;
-            background: #000;
-            border-bottom: 1px solid #222;
-        }
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url("images/logo.png") repeat;
+    background-size: 220px;
+    opacity: 0.08;
+    transform: rotate(-20deg);
+    animation: moveBg 40s linear infinite;
+    z-index: -1;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+@keyframes moveBg {
+    from { transform: translate(0,0) rotate(-20deg); }
+    to { transform: translate(600px,600px) rotate(-20deg); }
+}
 
-        header p {
-            margin-top: 8px;
-            font-size: 16px;
-            color: #ccc;
-        }
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        .products {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 40px;
-        }
+header h1 {
+    font-size: 44px;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+}
 
-        .product-card {
-            width: 260px;
-            background: #fff;
-            color: #000;
-            border-radius: 12px;
-            padding: 15px;
-            text-align: center;
-        }
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ff4d4d;
+}
 
-        .product-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
+/* ===== SLOGANS ===== */
+.slogans {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0;
+}
 
-        .price {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+.slogans li {
+    list-style: none;
+    font-size: 16px;
+    margin: 6px 0;
+    color: #ff3333;
+    text-shadow: 0 0 8px red;
+}
 
-        .order-btn {
-            background: #000; /* BLACK button */
-            color: #fff;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-        }
+/* ===== PRODUCTS ===== */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+}
 
-        .order-btn:hover {
-            background: #333;
-        }
+.product-card {
+    width: 260px;
+    background: rgba(0,0,0,0.75);
+    border: 1px solid red;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px red;
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #000;
-            border-top: 1px solid #222;
-            font-size: 14px;
-            color: #aaa;
-        }
-    </style>
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    color: #ff1a1a;
+    text-shadow: 0 0 8px red;
+}
+
+.price {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff4d4d;
+}
+
+/* ===== ORDER BUTTON ===== */
+.order-btn {
+    background: transparent;
+    color: #ff1a1a;
+    border: 2px solid red;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-shadow: 0 0 8px red;
+    box-shadow: 0 0 10px red inset;
+}
+
+.order-btn:hover {
+    background: red;
+    color: black;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ff4d4d;
+    font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>ShipStrike</h1>
+    <h1>AutoStrike</h1>
     <p>Upgrade your car today</p>
 </header>
 
+<ul class="slogans">
+    <li>• Premium Accessories</li>
+    <li>• Performance & Style</li>
+    <li>• Built for Every Drive</li>
+</ul>
+
 <section class="products">
 
-    <div class="product-card">
-        <img src="images/vacuum.jpg" alt="Car Vacuum" class="product-img">
-        <h3>Portable Car Vacuum</h3>
-        <p class="price">$25</p>
-        <button class="order-btn">Order Now</button>
-    </div>
+<div class="product-card">
+<img src="images/vacuum.jpg" class="product-img">
+<h3>Portable Vacuum Cleaner</h3>
+<p class="price">$25</p>
+<button class="order-btn">Order Now</button>
+</div>
 
-    <div class="product-card">
-        <img src="images/mat.jpg" alt="Floor Mats" class="product-img">
-        <h3>Car Floor Mats</h3>
-        <p class="price">$40</p>
-        <button class="order-btn">Order Now</button>
-    </div>
+<div class="product-card">
+<img src="images/wiper.jpg" class="product-img">
+<h3>Windshield Wiper Blades</h3>
+<p class="price">$18</p>
+<button class="order-btn">Order Now</button>
+</div>
 
-    <div class="product-card">
-        <img src="images/holder.jpg" alt="Phone Holder" class="product-img">
-        <h3>Phone Holder</h3>
-        <p class="price">$15</p>
-        <button class="order-btn">Order Now</button>
-    </div>
+<div class="product-card">
+<img src="images/gel.jpg" class="product-img">
+<h3>Cleaning Gel</h3>
+<p class="price">$10</p>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="product-card">
+<img src="images/cloth.jpg" class="product-img">
+<h3>Microfiber Cleaning Cloth</h3>
+<p class="price">$8</p>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="product-card">
+<img src="images/shade.jpg" class="product-img">
+<h3>Window Shades</h3>
+<p class="price">$22</p>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="product-card">
+<img src="images/mat.jpg" class="product-img">
+<h3>Floor Mats</h3>
+<p class="price">$40</p>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="product-card">
+<img src="images/holder.jpg" class="product-img">
+<h3>Device Holder</h3>
+<p class="price">$15</p>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="product-card">
+<img src="images/trash.jpg" class="product-img">
+<h3>Car Trash Can</h3>
+<p class="price">$12</p>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="product-card">
+<img src="images/leather.jpg" class="product-img">
+<h3>Leather Conditioner</h3>
+<p class="price">$20</p>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="product-card">
+<img src="images/steering.jpg" class="product-img">
+<h3>Steering Wheel Cover</h3>
+<p class="price">$18</p>
+<button class="order-btn">Order Now</button>
+</div>
 
 </section>
 
 <footer>
-    © 2026 ShipStrike | Premium Car Accessories
+© 2026 AutoStrike — Red Neon Performance
 </footer>
 
 </body>
 </html>
-
